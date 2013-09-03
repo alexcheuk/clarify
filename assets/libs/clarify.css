@@ -1,0 +1,44 @@
+.clarify-placer{
+	position: absolute;
+	overflow:visible;
+	height:10px;
+}
+
+.clarify-container{
+	color:#fff;
+	font-family: Arial;
+	font-size:12px;
+
+	padding:8px;
+	background:rgba(0,0,0,0.8);
+	position: absolute;
+	bottom:15px;
+
+	display: none;
+}
+
+.clarify-arrow{
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #444;
+	position:absolute;
+	bottom:-11px;
+	margin-left:-10px;
+	bottom:-10px;
+
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+.clarify-placeholder{
+	height:25px;
+	left:0;
+	right:0;
+	bottom:-25px;
+	position: absolute;
+
+	/*background:red;*/
+}
