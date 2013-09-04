@@ -1,7 +1,8 @@
 .clarify-placer{
-	position: absolute;
-	overflow:visible;
-	height:10px;
+    position: absolute;
+    z-index:9999;
+    overflow:visible;
+    height:10px;
 }
 
 .clarify-container{
@@ -41,4 +42,8 @@
 	position: absolute;
 
 	/*background:red;*/
+}
+
+.clarify-content{
+    line-height:15px;
 }

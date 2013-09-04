@@ -71,8 +71,7 @@
 				'opacity' : 0,
 				'bottom'  : 22,
 				width     : width - 16,
-				height    : (height === "auto") ? "" : height - 16,
-				left      : (parseFloat(width)/2*-1) + this.handle.outerWidth()/2
+				height    : (height === "auto") ? "" : height - 16
 			});
 		},
 
@@ -114,12 +113,14 @@
 					top: offset.top
 				});
 
-			this.container.show();
+			this.container.show().css({
+				left : this.handle.outerWidth()/2 - (parseFloat(this.container.outerWidth()/2))
+			});
 
 			this.container.stop().animate({
 				'bottom' : '28',
-				'opacity' : 1
-			}, 300);
+				'opacity' : 1,
+			}, 200);
 		},
 
 		_tryClose: function(){
