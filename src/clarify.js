@@ -38,8 +38,7 @@
 
 		_createElement: function(){
 			var element = $(templates),
-				content = this.handle.attr('tooltip') || this.options.content || "&nbsp;",
-				content_type = typeof content;
+				content = this.handle.attr('tooltip') || this.options.content || "&nbsp;";
 
 			this.element = element;
 			this.container = element.children('.clarify-container');
@@ -53,19 +52,19 @@
 				width = "auto",
 				height = "auto";
 
-			if(this.options.width === "auto" || parseInt(this.options.width) === NaN){
+			if(this.options.width === "auto" || isNaN(parseInt(this.options.width, 10))){
 				width = dimension.width;
 			}else{
-				width = parseInt(this.options.width);
+				width = parseInt(this.options.width, 10);
 			}
 
 			// Set minimum width
 			width = (width <= 40) ? 40 : width;
 
-			if(this.options.height === "auto" || parseInt(this.options.height) === NaN){
+			if(this.options.height === "auto" || isNaN(parseInt(this.options.height, 10))){
 				height = "auto";
 			}else{
-				height = parseInt(this.options.height);
+				height = parseInt(this.options.height, 10);
 			}
 
 			this.container.css({
@@ -149,7 +148,7 @@
 
 			return this;
 		}
-	}
+	};
 
 	$.fn.Clarify = function(method) {
 		if (Clarify.prototype[method]) {
